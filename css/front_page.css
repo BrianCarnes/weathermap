@@ -1,0 +1,71 @@
+/* LOADING IN FONTS */
+@font-face {
+    font-family: Roquefort;
+    src: url("../fonts/Roquefort-Standard.ttf")
+}
+@font-face {
+    font-family: Roquefort;
+    src: url("../fonts/Roquefort-Mild.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: Roquefort;
+    src: url("../fonts/Roquefort-Semi-Mild.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: Roquefort;
+    src: url("../fonts/Roquefort-Semi-Strong.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: Roquefort;
+    src: url("../fonts/Roquefort-Strong.ttf");
+    font-weight: bold;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Roquefort, sans-serif;
+}
+
+.backdrop-night
+{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: #b9adad; /* For browsers that do not support gradients */
+    background: linear-gradient(#0D0333,#26013D,#301140) fixed; /* Standard syntax */
+}
+
+.backdrop-morning
+{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: #b9adad; /* For browsers that do not support gradients */
+    background: linear-gradient(#4dc4ff,#ffcc66) fixed; /* Standard syntax */
+}
+
+.backdrop-midday
+{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: #b9adad; /* For browsers that do not support gradients */
+    background: linear-gradient(#99ccff,#66b2ff) fixed; /* Standard syntax */
+}
+
+.backdrop-dusk
+{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: #b9adad; /* For browsers that do not support gradients */
+    background: linear-gradient(#ff9966, #9966ff) fixed; /* Standard syntax */
+}
+
+.backdrop-dawn
+{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: #b9adad; /* For browsers that do not support gradients */
+    background: linear-gradient(#9966ff,#ff9966) fixed; /* Standard syntax */
+}
