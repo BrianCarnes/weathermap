@@ -28,8 +28,79 @@
 }
 body {
     font-family: Roquefort, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+.mainContainer {
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 2fr 1fr;
+}
+.leftContainer {
+    grid-area: left;
+    height: 100vh;
+    background-color: #e6ecf7
+}
+.right.container {
+    grid-area: right;
+    height: 100vh;
+    background-color: #f2f6ff
+}
+/* Time of Day Container */
+.tod{
+    display: grid;
+    grid-template-areas:
+            "Time Toggle"
+            "Date Date"
+            "Greeting Greeting";
+}
+.currentTime {
+    grid-area: Time;
+}
+.toggle {
+    grid-area: Toggle
+}
+.longDate {
+    grid-area: Date
+}
+.greeting {
+    grid-area: Greeting;
+}
+/* End Time of Day Container */
 
+/* Weather Forecast */
+    .sixDayForecast {
+        display: grid;
+        grid-template-areas: "one two three four five six";
+        justify-content: space-around;
+      }
+    .day {
+        width: 8em;
+        height: 6em;
+        background-color: #f2f6ff;
+        border-radius: 10px;
+    }
+    .day1Card{
+        grid-area: one;
+    }
+    .day2Card{
+        grid-area: two;
+    }
+    .day3Card{
+        grid-area: three;
+    }
+    .day4Card{
+        grid-area: four;
+    }
+    .day5Card{
+        grid-area: five;
+    }
+    .day6Card{
+        grid-area: six;
+    }
+/* End of Weather Forecast*/
+
+/* Time of Day Gradients */
 .backdrop-night
 {
     background-attachment: fixed;
