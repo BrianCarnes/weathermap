@@ -1,7 +1,7 @@
 /* LOADING IN FONTS */
 @font-face {
     font-family: Roquefort;
-    src: url("../fonts/Roquefort-Standard.ttf")
+    src: url("../fonts/Roquefort-Standard.ttf");
 }
 @font-face {
     font-family: Roquefort;
@@ -39,12 +39,14 @@ body {
 .leftContainer {
     grid-area: left;
     height: 100vh;
-    background-color: #e6ecf7
+    background-color: #e6ecf7;
 }
 .right.container {
     grid-area: right;
     height: 100vh;
-    background-color: #f2f6ff
+    background-color: #f2f6ff;
+    justify-content: center;
+
 }
 /* Time of Day Container */
 .tod{
@@ -58,10 +60,10 @@ body {
     grid-area: Time;
 }
 .toggle {
-    grid-area: Toggle
+    grid-area: Toggle;
 }
 .longDate {
-    grid-area: Date
+    grid-area: Date;
 }
 .greeting {
     grid-area: Greeting;
@@ -138,6 +140,33 @@ body {
     }
 /* End of Misc Specs Container */
 
+/* Navi Container*/
+.navi {
+    display: grid;
+    grid-template-areas:'search pfp';
+}
+#search {
+    grid-area: search;
+    background-color: #e6ecf7;
+    width: 10em;
+    height: 2em;
+}
+.pfp {
+    grid-area: pfp;
+    width: 3em;
+    height: 2em;
+}
+.largeCard {
+    display: grid;
+    grid-area: largeCard;
+    width: 25em;
+    height: 60vh;
+}
+.random {
+    width: 25em;
+    height: 15vh;
+    background-color: #FFB767;
+}
 /* Time of Day Gradients */
 .backdrop-night
 {
