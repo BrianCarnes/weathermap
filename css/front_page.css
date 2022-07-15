@@ -68,7 +68,7 @@ body {
 }
 /* End Time of Day Container */
 
-/* Weather Forecast */
+/* Weather Forecast Container*/
     .sixDayForecast {
         display: grid;
         grid-template-areas: "one two three four five six";
@@ -98,7 +98,45 @@ body {
     .day6Card{
         grid-area: six;
     }
-/* End of Weather Forecast*/
+/* End of Weather Forecast Container*/
+
+/* Misc Specs Container */
+    .miscSpecs{
+        display: grid;
+        grid-template-areas:
+                "aqi rise"
+                "rain map";
+        justify-content: space-around;
+    }
+    .aqi {
+        grid-area: aqi;
+        width: 24em;
+        height: 12em;
+        background-color: #f2f6ff;
+        border-radius: 10px;
+    }
+    .riseNSet{
+        grid-area: rise;
+        width: 24em;
+        height: 12em;
+        background-color: #f2f6ff;
+        border-radius: 10px;
+    }
+    .rainfall{
+        grid-area: rain;
+        width: 24em;
+        height: 12em;
+        background-color: #f2f6ff;
+        border-radius: 10px;
+    }
+    .map{
+        grid-area: map;
+        width: 24em;
+        height: 12em;
+        background-color: #f2f6ff;
+        border-radius: 10px;
+    }
+/* End of Misc Specs Container */
 
 /* Time of Day Gradients */
 .backdrop-night
