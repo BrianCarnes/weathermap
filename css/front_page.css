@@ -173,10 +173,6 @@ input:checked + .slider:before {
     }
     .day1Card{
         grid-area: one;
-        background-color: linear-gradient(rgba(226,118,85,.7),rgba(229,136,85,.7),rgba(230,155,87,.7),
-        rgba(230,172,94,.7),rgba(228,190,104,.7),rgba(222,197,107,.7),rgba(216,204,111,.7),
-        rgba(209,211,116,.7),rgba(197,210,111,.7),rgba(185,209,108,.7),rgba(171,207,105,.7),
-        rgba(157,206,103,.7));
     }
     .day2Card{
         grid-area: two;
@@ -393,10 +389,12 @@ input:checked + .slider:before {
 }
 
 .temp90s {
-    background-color: linear-gradient(rgba(226,118,85,.7),rgba(229,136,85,.7),rgba(230,155,87,.7),
-    rgba(230,172,94,.7),rgba(228,190,104,.7),rgba(222,197,107,.7),rgba(216,204,111,,.7),
-    rgba(209,211,116,.7),rgba(197,210,111,.7),rgba(185,209,108,.7),rgba(171,207,105,.7),
-    rgba(157,206,103,.7));
+    /*background-color: linear-gradient(to right bottom, rgba(226,118,85,.7),rgba(229,136,85,.7),rgba(230,155,87,.7),*/
+    /*rgba(230,172,94,.7),rgba(228,190,104,.7),rgba(222,197,107,.7),rgba(216,204,111,.7),*/
+    /*rgba(209,211,116,.7),rgba(197,210,111,.7),rgba(185,209,108,.7),rgba(171,207,105,.7),*/
+    /*rgba(157,206,103,.7));*/
+    /*background: linear-gradient(to right bottom, #e27655, #e58855, #e69b57, #e6ac5e, #e4be68, #dec56b, #d8cc6f, #d1d374, #c5d26f, #b9d16c, #abcf69, #9dce67);*/
+    /*background: #e27655;*/
 }
 
 .temp100s {
