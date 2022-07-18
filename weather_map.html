@@ -8,7 +8,7 @@
 </head>
 <body>
     <main class="mainContainer">
-        <nav class="navBar"></nav>
+<!--        <nav class="navBar"></nav>-->
         <div class="leftContainer">
             <section class="tod">
                 <div class="currentTime">test</div>
@@ -47,21 +47,21 @@
                 <div class="rainfall">
                     <h6>Monthly Rainfall</h6>
                 </div>
-                <div class="map"></div>
+                <div class="map" id="map"></div>
             </section>
         </div><!--LEFT CONTAINER CLOSING DIV-->
         <div class="rightContainer">
                 <section class="navi">
                     <nav class="location-search">
                         <form>
-                            <label for="search">Enter City</label>
-                            <input id="search" name="search" type="text">
+                            <label for="search"></label>
+                            <input id="search" name="search" type="text" placeholder="Enter Location">
                             <input type="submit" id="search-button">
                         </form>
                     </nav>
                     <div class="pfp"></div>
                 </section>
-                <section class="current largeCard">
+                <section class="current largeCard backdrop-midday">
                     <div class="location"></div>
                     <div class="currentIcon"></div>
                     <div class="shortDate"></div>
@@ -69,11 +69,15 @@
                     <div class="currentClimate"></div>
                     <div class="wind"></div>
                     <div class="humidity"></div>
-                    <div class="random"></div>
                 </section>
+                <section class="random"></section>
         </div> <!--RIGHT CONTAINER CLOSING DIV-->
     </main>
+<!-- API KEYS -->
 <script src="js/keys.js"></script>
+<!-- LINK TO MAPBOX API -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<!-- LINK TO JS -->
 <script src="js/main.js"></script>
 </body>
 </html>

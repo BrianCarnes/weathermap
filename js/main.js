@@ -17,5 +17,12 @@
 		console.log('Diving in - here is current information: ', data.main);
 		console.log('A step further - information for tomorrow: ', data);
 	});
-
+	// DISPLAY MAPBOX API VIA TOKEN KEY
+	mapboxgl.accessToken = MAPBOX_API;
+	let map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/light-v10\n',
+		zoom: 11,
+		center: [-98.4916, 29.4252]
+	});
 })();
