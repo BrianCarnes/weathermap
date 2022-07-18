@@ -33,37 +33,41 @@ function WeatherAppFetch(location) {
 		let currentTemp1 = parseInt(data.daily[0].temp.day);
 		day1Card.innerHTML = `<h1>ICON</h1><h3>${today1}</h3>\n<h2>${currentTemp1}&deg;F</h2>`
 		day1Card.classList.add(backgroundGradient(currentTemp1));
-		console.log(backgroundGradient(currentTemp1));
 		/* Day 2 DOM Manipulation */
 		let convertDT2 = data.daily[1].dt * 1000
 		let dateObject2 = new Date(convertDT2);
 		let today2 = dateObject2.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp2 = parseInt(data.daily[1].temp.day);
 		day2Card.innerHTML = `<h1>ICON</h1><h3>${today2}</h3>\n<h2>${currentTemp2}&deg;F</h2>`
+		day2Card.classList.add(backgroundGradient(currentTemp2));
 		/* Day 3 DOM Manipulation */
 		let convertDT3 = data.daily[2].dt * 1000
 		let dateObject3 = new Date(convertDT3);
 		let today3 = dateObject3.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp3 = parseInt(data.daily[2].temp.day);
 		day3Card.innerHTML = `<h1>ICON</h1><h3>${today3}</h3>\n<h2>${currentTemp3}&deg;F</h2>`
+		day3Card.classList.add(backgroundGradient(currentTemp3));
 		/* Day 4 DOM Manipulation */
 		let convertDT4 = data.daily[3].dt * 1000
 		let dateObject4 = new Date(convertDT4);
 		let today4 = dateObject4.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp4 = parseInt(data.daily[3].temp.day);
 		day4Card.innerHTML = `<h1>ICON</h1><h3>${today4}</h3>\n<h2>${currentTemp4}&deg;F</h2>`
+		day4Card.classList.add(backgroundGradient(currentTemp4));
 		/* Day 5 DOM Manipulation */
 		let convertDT5 = data.daily[4].dt * 1000
 		let dateObject5 = new Date(convertDT5);
 		let today5 = dateObject5.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp5 = parseInt(data.daily[4].temp.day);
 		day5Card.innerHTML = `<h1>ICON</h1><h3>${today5}</h3>\n<h2>${currentTemp5}&deg;F</h2>`
+		day5Card.classList.add(backgroundGradient(currentTemp5));
 		/* Day 6 DOM Manipulation */
 		let convertDT6 = data.daily[5].dt * 1000
 		let dateObject6 = new Date(convertDT6);
 		let today6 = dateObject6.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp6 = parseInt(data.daily[5].temp.day);
 		day6Card.innerHTML = `<h1>ICON</h1><h3>${today6}</h3>\n<h2>${currentTemp6}&deg;F</h2>`
+		day6Card.classList.add(backgroundGradient(currentTemp6));
 		/* Sunrise and Sunset */
 		let sunrise = data.daily[0].sunrise * 1000
 		let sunriseObject = new Date(sunrise);
@@ -95,7 +99,7 @@ function backgroundGradient (temp = 1) {
 		output = "temp50s-60s";
 	} else if (temp > 70 && temp <= 90) {
 		output = "temps70s-80s";
-	} else if (temp > 90 && temp <= 100) {
+	} else if (temp > 90 && temp <= 99) {
 		output = "temp90s";
 	} else {
 		output = "temp100s"
