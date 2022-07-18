@@ -7,15 +7,31 @@ function WeatherAppFetch(location) {
 	const day5Card = document.querySelector(".day5Card");
 	const day6Card = document.querySelector(".day6Card");
 	// prepare the query parameters to identify us to openweather
-// and give it our weather query
-	let queryParameters = new URLSearchParams({
+	// and give it our weather query
 
+	let queryParameters = new URLSearchParams({
 		APPID: OPEN_WEATHER_APPID,
-		d: location, //user input location
+		q: location, //user input location
 		lat: 29.423017,
 		lon: -98.48527,
 		units: "imperial"
-	});
+	}); // concat the query parameters onto the URL
+	function findLat(input = "San Antonio") {
+		let queryParameters1 = new URLSearchParams({
+			APPID: OPEN_WEATHER_APPID,
+			q: input //user input location
+			units: "imperial"
+		});
+		fetch("http://api.openweathermap.org/data/2.5/direct?" + queryParameters1, {
+			method: "GET"
+		}).then(async function (response) {
+			/* Use await to wait for the json data and then do something with it */
+			const data = await response.json();
+			console.log(data);
+
+		});
+	}
+	findLat("San Antonio")
 // concat the query parameters onto the URL
 	fetch("http://api.openweathermap.org/data/2.5/onecall?" + queryParameters, {
 		method: "GET"
