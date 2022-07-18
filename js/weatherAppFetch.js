@@ -32,6 +32,8 @@ function WeatherAppFetch(location) {
 		let today1 = dateObject1.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp1 = parseInt(data.daily[0].temp.day);
 		day1Card.innerHTML = `<h1>ICON</h1><h3>${today1}</h3>\n<h2>${currentTemp1}&deg;F</h2>`
+		day1Card.classList.add(backgroundGradient(currentTemp1));
+		console.log(backgroundGradient(currentTemp1));
 		/* Day 2 DOM Manipulation */
 		let convertDT2 = data.daily[1].dt * 1000
 		let dateObject2 = new Date(convertDT2);
@@ -82,3 +84,21 @@ function WeatherAppFetch(location) {
 	});
 }
 WeatherAppFetch("San Antonio, US");
+
+function backgroundGradient (temp = 1) {
+	let output;
+	if (temp <= 30) {
+		output = "temp20s";
+	} else if (temp > 30 && temp <= 50) {
+		output = "temp30s-50s";
+	} else if (temp > 50 && temp <= 70) {
+		output = "temp50s-60s";
+	} else if (temp > 70 && temp <= 90) {
+		output = "temps70s-80s";
+	} else if (temp > 90 && temp <= 100) {
+		output = "temp90s";
+	} else {
+		output = "temp100s"
+	}
+	return output
+}
