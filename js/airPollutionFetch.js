@@ -44,7 +44,7 @@ function airPollutionFetch () {
 				break;
 		}
 		let currentAQI = document.querySelector('.currentAqi');
-		currentAQI.innerHTML = "<h1>" + AQI + "\n</h1>" + "<h3>" + description + "</h3>"
+		currentAQI.innerHTML = "<h3 style='margin:0'>" + AQI + "\n</h3>" + "<h6 style='margin:0;'>" + description + "</h6>"
 		let airComponentsPM2 = data.list[0].components.pm2_5;
 		let airComponentsPM10 = data.list[0].components.pm10;
 		let airComponentsSO2 = data.list[0].components.so2;
@@ -52,12 +52,12 @@ function airPollutionFetch () {
 		let airComponentsO3 = data.list[0].components.o3;
 		let airComponentsCO = data.list[0].components.co;
 
-		document.querySelector(".aqiDetails1").innerHTML = `Particles\n${airComponentsPM2}`
-		document.querySelector(".aqiDetails2").innerHTML = `Pollution\n${airComponentsPM10}`
-		document.querySelector(".aqiDetails3").innerHTML = `SO2\n${airComponentsSO2}`
-		document.querySelector(".aqiDetails4").innerHTML = `Ammonia\n${airComponentsNH3}`
-		document.querySelector(".aqiDetails5").innerHTML = `Ozone\n${airComponentsO3}`
-		document.querySelector(".aqiDetails6").innerHTML = `Particles\n${airComponentsPM2}`
+		document.querySelector(".aqiDetails1").innerHTML = `<p>Par\n${airComponentsPM2}</p>`
+		document.querySelector(".aqiDetails2").innerHTML = `<p>Pol\n${airComponentsPM10}</p>`
+		document.querySelector(".aqiDetails3").innerHTML = `<p>SO2\n${airComponentsSO2}</p>`
+		document.querySelector(".aqiDetails4").innerHTML = `<p>NH3\n${airComponentsNH3}</p>`
+		document.querySelector(".aqiDetails5").innerHTML = `<p>O3\n${airComponentsO3}</p>`
+		document.querySelector(".aqiDetails6").innerHTML = `<p>CO\n${airComponentsCO}</p>`
 	});
 }
 

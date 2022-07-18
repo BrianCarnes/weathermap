@@ -23,6 +23,26 @@
     src: url("../fonts/Roquefort-Strong.ttf");
     font-weight: bold;
 }
+@font-face {
+    font-family: Concourse;
+    src: url("../fonts/Concourse T4 Regular.otf");
+}
+@font-face {
+    font-family: Concourse;
+    src: url("../fonts/Concourse T4 Bold.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Concourse;
+    src: url("../fonts/Concourse T4 Italic.otf");
+    font-style: italic;
+}
+@font-face {
+    font-family: Concourse;
+    src: url("../fonts/Concourse T4 Bold Italic.otf");
+    font-weight: bold;
+    font-style: italic;
+}
 * {
     box-sizing: border-box;
 }
@@ -30,6 +50,9 @@ body {
     font-family: Roquefort, sans-serif;
     margin: 0;
     padding: 0;
+}
+h3, h4, h5, h6, p {
+    font-family: Concourse, sans-serif;
 }
 .mainContainer {
     display: grid;
@@ -175,7 +198,7 @@ input:checked + .slider:before {
         grid-template-areas:
                 "aqi rise"
                 "rain map";
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .aqi {
         grid-area: aqi;
@@ -183,13 +206,83 @@ input:checked + .slider:before {
         height: 12em;
         background-color: #f2f6ff;
         border-radius: 10px;
+        margin-bottom: .5em;
+    }
+    .detailsContainer{
+        display: grid;
+        grid-template-areas: "aqi1 aqi2 aqi3 aqi4 aqi5 aqi6";
+        justify-content: space-evenly;
+        background: #f2f6ff;
+        border: rgba(20,180,20,.6);
+        border-radius: 10px;
+        margin-top: 1em;
+    }
+    .aqiDetails1{
+        grid-area: aqi1;
+        width: 3.5em;
+        height: 4em;
+        border: rgba(20,200,20,.8) solid 1px;
+        border-radius: 10px;
+    }
+    .aqiDetails2{
+        grid-area: aqi2;
+        width: 3.5em;
+        height: 4em;
+        border: rgba(20,200,20,.8) solid 1px;
+        border-radius: 10px;
+    }
+    .aqiDetails3{
+        grid-area: aqi3;
+        width: 3.5em;
+        height: 4em;
+        border: rgba(20,200,20,.8) solid 1px;
+        border-radius: 10px;
+    }
+    .aqiDetails4{
+        grid-area: aqi4;
+        width: 3.5em;
+        height: 4em;
+        border: rgba(20,200,20,.8) solid 1px;
+        border-radius: 10px;
+    }
+    .aqiDetails5{
+        grid-area: aqi5;
+        width: 3.5em;
+        height: 4em;
+        border: rgba(20,200,20,.8) solid 1px;
+        border-radius: 10px;
+    }
+    .aqiDetails6{
+        grid-area: aqi6;
+        width: 3.5em;
+        height: 4em;
+        border: rgba(20,200,20,.8) solid 1px;
+        border-radius: 10px;
     }
     .riseNSet{
         grid-area: rise;
+        display: grid;
+        grid-template-areas:
+                "snrTitle snrTitle"
+                "sunrise moonrise";
+        grid-template-columns: 1fr 1fr;
+
         width: 24em;
         height: 12em;
         background-color: #f2f6ff;
         border-radius: 10px;
+        margin-bottom: .5em;
+    }
+    .snrTitle{
+        grid-area: snrTitle;
+    }
+    .currentRNS{
+        grid-area: sunrise;
+        width: 10em;
+    }
+    .photography{
+        grid-area: moonrise;
+        width: 10em;
     }
     .rainfall{
         grid-area: rain;

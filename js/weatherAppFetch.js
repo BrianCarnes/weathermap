@@ -31,37 +31,54 @@ function WeatherAppFetch(location) {
 		let dateObject1 = new Date(convertDT1);
 		let today1 = dateObject1.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp1 = parseInt(data.daily[0].temp.day);
-		day1Card.innerHTML = `<h1>ICON</h1><h3>${today1}</h3><h2>${currentTemp1}&deg;F</h2>`
+		day1Card.innerHTML = `<h1>ICON</h1><h3>${today1}</h3>\n<h2>${currentTemp1}&deg;F</h2>`
 		/* Day 2 DOM Manipulation */
 		let convertDT2 = data.daily[1].dt * 1000
 		let dateObject2 = new Date(convertDT2);
 		let today2 = dateObject2.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp2 = parseInt(data.daily[1].temp.day);
-		day2Card.innerHTML = `<h1>ICON</h1><h3>${today2}</h3><h2>${currentTemp2}&deg;F</h2>`
+		day2Card.innerHTML = `<h1>ICON</h1><h3>${today2}</h3>\n<h2>${currentTemp2}&deg;F</h2>`
 		/* Day 3 DOM Manipulation */
 		let convertDT3 = data.daily[2].dt * 1000
 		let dateObject3 = new Date(convertDT3);
 		let today3 = dateObject3.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp3 = parseInt(data.daily[2].temp.day);
-		day3Card.innerHTML = `<h1>ICON</h1><h3>${today3}</h3><h2>${currentTemp3}&deg;F</h2>`
+		day3Card.innerHTML = `<h1>ICON</h1><h3>${today3}</h3>\n<h2>${currentTemp3}&deg;F</h2>`
 		/* Day 4 DOM Manipulation */
 		let convertDT4 = data.daily[3].dt * 1000
 		let dateObject4 = new Date(convertDT4);
 		let today4 = dateObject4.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp4 = parseInt(data.daily[3].temp.day);
-		day4Card.innerHTML = `<h1>ICON</h1><h3>${today4}</h3><h2>${currentTemp4}&deg;F</h2>`
+		day4Card.innerHTML = `<h1>ICON</h1><h3>${today4}</h3>\n<h2>${currentTemp4}&deg;F</h2>`
 		/* Day 5 DOM Manipulation */
 		let convertDT5 = data.daily[4].dt * 1000
 		let dateObject5 = new Date(convertDT5);
 		let today5 = dateObject5.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp5 = parseInt(data.daily[4].temp.day);
-		day5Card.innerHTML = `<h1>ICON</h1><h3>${today5}</h3><h2>${currentTemp5}&deg;F</h2>`
+		day5Card.innerHTML = `<h1>ICON</h1><h3>${today5}</h3>\n<h2>${currentTemp5}&deg;F</h2>`
 		/* Day 6 DOM Manipulation */
 		let convertDT6 = data.daily[5].dt * 1000
 		let dateObject6 = new Date(convertDT6);
 		let today6 = dateObject6.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp6 = parseInt(data.daily[5].temp.day);
-		day6Card.innerHTML = `<h1>ICON</h1><h3>${today6}</h3><h2>${currentTemp6}&deg;F</h2>`
+		day6Card.innerHTML = `<h1>ICON</h1><h3>${today6}</h3>\n<h2>${currentTemp6}&deg;F</h2>`
+		/* Sunrise and Sunset */
+		let sunrise = data.daily[0].sunrise * 1000
+		let sunriseObject = new Date(sunrise);
+		let sunriseToday = sunriseObject.toLocaleString("en-US", {hour: 'numeric', minute: "numeric", second: "numeric"});
+		let sunset = data.daily[0].sunset * 1000
+		let sunsetObject = new Date(sunset);
+		let sunsetToday = sunsetObject.toLocaleString("en-US", {hour: 'numeric', minute: "numeric", second: "numeric"});
+		document.querySelector(".currentRNS").innerHTML = `<p>Sunrise: ${sunriseToday}</p>\n<p>Sunset: ${sunsetToday}</p>`
+		/* Moonrise and Moonset */
+		let moonrise = data.daily[0].moonrise * 1000
+		let moonriseObject = new Date(moonrise);
+		let moonriseToday = moonriseObject.toLocaleString("en-US", {hour: 'numeric', minute: "numeric", second: "numeric"});
+		let moonset = data.daily[0].moonset * 1000
+		let moonsetObject = new Date(moonset);
+		let moonsetToday = moonsetObject.toLocaleString("en-US", {hour: 'numeric', minute: "numeric", second: "numeric"});
+		document.querySelector(".moonRise").innerHTML = `<p>Moonrise: ${moonriseToday}</p>`
+		document.querySelector(".moonSet").innerHTML = `<p>Moonset: ${moonsetToday}</p>`
 	});
 }
 WeatherAppFetch("San Antonio, US");
