@@ -83,7 +83,7 @@ function WeatherAppFetch(location = ["-98.48527","29.423017"]) {
 		let sunset = data.daily[0].sunset * 1000
 		let sunsetObject = new Date(sunset);
 		let sunsetToday = sunsetObject.toLocaleString("en-US", {hour: 'numeric', minute: "numeric", second: "numeric"});
-		document.querySelector(".currentRNS").innerHTML = `<p>Sunrise: ${sunriseToday}</p>\n<p>Sunset: ${sunsetToday}</p>`
+		document.querySelector(".sun").innerHTML = `<p>Sunrise: ${sunriseToday}</p>\n<p>Sunset: ${sunsetToday}</p>`
 		/* Moonrise and Moonset */
 		let moonrise = data.daily[0].moonrise * 1000
 		let moonriseObject = new Date(moonrise);
