@@ -93,6 +93,24 @@ function WeatherAppFetch(location = ["-98.48527","29.423017"]) {
 		let moonsetToday = moonsetObject.toLocaleString("en-US", {hour: 'numeric', minute: "numeric", second: "numeric"});
 		document.querySelector(".moonRise").innerHTML = `<p>Moonrise: ${moonriseToday}</p>`
 		document.querySelector(".moonSet").innerHTML = `<p>Moonset: ${moonsetToday}</p>`
+		/* Large Card DOM Manipulation */
+		let currentTemp = parseInt(data.current.temp);
+		let currentMain = data.current.weather[0].main;
+		let currentDT = new Date(data.current.dt * 1000);
+		// let currentIcon = iconLoader(currentMain);
+		// let currentLocation = cityFinder(location);
+		let currentClimate = data.current.weather[0].description;
+		let currentWindDirection = data.current.wind_deg;
+		let currentWindSpeed = data.current.wind_speed;
+		let currentHumidity = data.current.humidity;
+		document.querySelector(".shortDate").innerHTML = "Today, " + currentDT.toLocaleDateString("en-US",{day: "numeric", month: "long"});
+		// document.querySelector(".location").innerHTML = currentLocation
+		// document.querySelector(".currentIcon").innerHTML = currentIcon
+		document.querySelector(".currentTemp").innerHTML = `${currentTemp}&deg;F`;
+		document.querySelector(".currentClimate").innerHTML = `${currentClimate}`
+		document.querySelector(".wind").innerHTML = `Wind Direction: ${currentWindDirection}&deg;<br>Wind Speed: ${currentWindSpeed} mph`
+		document.querySelector(".humidity").innerHTML = `Humidity: ${currentHumidity}%`
+		document.querySelector(".largeCard").classList.add(backgroundGradient(currentTemp));
 	});
 }
 WeatherAppFetch();

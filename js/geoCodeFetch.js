@@ -10,12 +10,3 @@ function geocode(search, token = MAPBOX_API) {
 			return data.features[0].center;
 		});
 }
-
-// function getLong(city) {
-// 	let latAndLong = geocode(city)
-// 	return latAndLong[0];
-// }
-// function getLat(city) {
-// 	let latAndLong = geocode(city)
-// 	return latAndLong[1];
-// }

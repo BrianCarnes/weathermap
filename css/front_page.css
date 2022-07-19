@@ -460,6 +460,21 @@ input:checked + .slider:before {
 }
 
 .temp100s {
-    background-image: linear-gradient(to right top, rgba(174,76,76,.7), rgba(184,83,78,.7), rgba(194,91,80,.7), rgba(204,99,82,.7), rgba(214,107,83,.7), rgba(220,118,83,.7), rgba(225,130,84,.7), rgba(230,142,85,.7), rgba(230,160,89,.7), rgba(229,178,96,.7), rgba(227,196, 108,.7), rgba(224,213,123,.7));
+    background-image: linear-gradient(to right top, rgba(174, 76, 76, .7), rgba(184, 83, 78, .7), rgba(194, 91, 80, .7), rgba(204, 99, 82, .7), rgba(214, 107, 83, .7), rgba(220, 118, 83, .7), rgba(225, 130, 84, .7), rgba(230, 142, 85, .7), rgba(230, 160, 89, .7), rgba(229, 178, 96, .7), rgba(227, 196, 108, .7), rgba(224, 213, 123, .7));
+}
 
 /* END OF TEMP GRADIENTS */
+
+/* IMAGE LOADERS */
+.animeCloud {
+    background-image: url("../img/anime-cloudy.gif")
+}
+.animeHot {
+    background-image: url("../img/fan-anime.gif")
+}
+.animeClearSkies {
+    background-image: url("../img/sunshineGirl.gif")
+}
+.animeRain {
+    background-image: url("../img/totoro-rain.gif")
+}
