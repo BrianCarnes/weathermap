@@ -61,7 +61,7 @@ h3, h4, h5, h6, p {
 }
 .leftContainer {
     grid-area: left;
-    height: 100vh;
+    height: 100%;
     background-color: #e6ecf7;
 }
 .right.container {
@@ -69,7 +69,7 @@ h3, h4, h5, h6, p {
     grid-area: right;
     grid-template-areas: 'navi''largeCard''random';
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     background-color: #f2f6ff;
 }
 /* Time of Day Container */
