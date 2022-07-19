@@ -80,7 +80,7 @@ h3, h4, h5, h6, p {
             "Date Date"
             "Greeting Greeting";
     justify-content: space-between;
-    margin: 2em;
+    margin-top: 3em;
 }
 .currentTime {
     grid-area: Time;
@@ -200,15 +200,16 @@ input:checked + .slider:before {
         display: grid;
         grid-template-areas:
                 "aqi map"
-                "rise map";
+                "ss map";
         justify-content: space-evenly;
     }
     .aqi {
         grid-area: aqi;
-        width: 24em;
+        width: 26em;
         height: 12em;
         background-color: #f2f6ff;
         border-radius: 10px;
+        margin-top: 2em;
         margin-bottom: .5em;
     }
     .detailsContainer{
@@ -220,12 +221,16 @@ input:checked + .slider:before {
         border-radius: 10px;
         margin-top: 1em;
     }
+    .detailsContainer p {
+        margin-block: .7em;
+    }
     .aqiDetails1{
         grid-area: aqi1;
         width: 3.5em;
         height: 4em;
         border: rgba(20,200,20,.8) solid 1px;
         border-radius: 10px;
+        text-align: center;
     }
     .aqiDetails2{
         grid-area: aqi2;
@@ -233,6 +238,7 @@ input:checked + .slider:before {
         height: 4em;
         border: rgba(20,200,20,.8) solid 1px;
         border-radius: 10px;
+        text-align: center;
     }
     .aqiDetails3{
         grid-area: aqi3;
@@ -240,6 +246,7 @@ input:checked + .slider:before {
         height: 4em;
         border: rgba(20,200,20,.8) solid 1px;
         border-radius: 10px;
+        text-align: center;
     }
     .aqiDetails4{
         grid-area: aqi4;
@@ -247,6 +254,7 @@ input:checked + .slider:before {
         height: 4em;
         border: rgba(20,200,20,.8) solid 1px;
         border-radius: 10px;
+        text-align: center;
     }
     .aqiDetails5{
         grid-area: aqi5;
@@ -254,6 +262,7 @@ input:checked + .slider:before {
         height: 4em;
         border: rgba(20,200,20,.8) solid 1px;
         border-radius: 10px;
+        text-align: center;
     }
     .aqiDetails6{
         grid-area: aqi6;
@@ -261,38 +270,56 @@ input:checked + .slider:before {
         height: 4em;
         border: rgba(20,200,20,.8) solid 1px;
         border-radius: 10px;
+        text-align: center;
     }
     .riseNSet{
-        grid-area: rise;
+        grid-area: ss;
         display: grid;
         grid-template-areas:
-                "snrTitle snrTitle"
-                "sunrise moonrise";
+                "title title"
+                "sun moon";
         grid-template-columns: 1fr 1fr;
-
-        width: 24em;
-        height: 12em;
+        width: 26em;
+        height: 14em;
         background-color: #f2f6ff;
         border-radius: 10px;
+        margin-top: 2em;
         margin-bottom: .5em;
     }
-    .snrTitle{
-        grid-area: snrTitle;
+    .title{
+        grid-area: title;
+        margin-left: 1em;
     }
-    .currentRNS{
-        grid-area: sunrise;
+    .sun{
+        grid-area: sun;
+        width: 10em;
+        margin-left: 1em;
+    }
+    .moon{
+        grid-area: moon;
         width: 10em;
     }
-    .photography{
-        grid-area: moonrise;
-        width: 10em;
-    }
+    /*.currentRNS{*/
+    /*    grid-area: sunrise;*/
+    /*    width: 10em;*/
+    /*}*/
+    /*.photography{*/
+    /*    grid-area: moonrise;*/
+    /*    width: 10em;*/
+    /*}*/
     .map{
         grid-area: map;
-        width: 24.5em;
-        height: 24.5em;
+        width: 26em;
+        height: 28.5em;
         background-color: #f2f6ff;
         border-radius: 10px;
+        margin-top: 2em;
+    }
+
+    .mapboxgl-canvas {
+        border-radius: 10px;
+        width: 26em;
+        height: 28.5em;
     }
 /* End of Misc Specs Container */
 
@@ -301,21 +328,47 @@ input:checked + .slider:before {
     display: grid;
     grid-template-areas:'search pfp';
     justify-content: space-around;
-    margin-top: 2em;
+    margin-top: 3em;
 }
+
+.buttonIn {
+    width: 290px;
+    position: relative;
+}
+
 #search {
     grid-area: search;
     background-color: #e6ecf7;
-    width: 15em;
     height: 2.5em;
-    border-radius: 10px;
+    border: #e6ecf7;
+    margin-left: .5em;
+    padding: 0px;
+    width: 100%;
+    outline: none;
+    border-radius: 7px;
 }
+
+#search-button {
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    right: 0px;
+    z-index: 2;
+    border: none;
+    height: 2.5em;
+    cursor: pointer;
+    color: white;
+    background-color: #FFB767;
+    transform: translateX(2px);
+}
+
 .pfp {
     grid-area: pfp;
     width: 2.5em;
     height: 2.5em;
     background-color: #FFB767;
-    border-radius: 10px;
+    border-radius: 7px;
+    margin-right: .5em;
 }
 /* END OF NAVI CONTAINER */
 
@@ -326,15 +379,20 @@ input:checked + .slider:before {
     width: 25em;
     height: 60vh;
     background-color: #FFB767;
-    margin: 3em;
+    margin-top: .5em;
+    margin-left: 3em;
+    margin-right: 3em;
+    /*margin-bottom: 3em;*/
+
 }
 .random {
     width: 25em;
-    height: 15vh;
+    height: 20vh;
     grid-area: random;
     border-radius: 10px;
     background-color: #FFB767;
-    margin: 3em;
+    margin-top: 2em;
+    margin-left: 3em;
 }
 
 /*Time of Day Gradients*/
