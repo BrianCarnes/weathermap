@@ -65,11 +65,12 @@ h3, h4, h5, h6, p {
     background-color: #e6ecf7;
 }
 .right.container {
+    display: grid;
     grid-area: right;
+    grid-template-areas: 'navi''largeCard''random';
+    justify-content: center;
     height: 100vh;
     background-color: #f2f6ff;
-    justify-content: center;
-
 }
 /* Time of Day Container */
 .tod{
@@ -79,6 +80,7 @@ h3, h4, h5, h6, p {
             "Date Date"
             "Greeting Greeting";
     justify-content: space-between;
+    margin: 2em;
 }
 .currentTime {
     grid-area: Time;
@@ -294,34 +296,48 @@ input:checked + .slider:before {
     }
 /* End of Misc Specs Container */
 
-/* Navi Container*/
+/* NAVI CONTAINER */
 .navi {
     display: grid;
     grid-template-areas:'search pfp';
+    justify-content: space-around;
+    margin-top: 2em;
 }
 #search {
     grid-area: search;
     background-color: #e6ecf7;
-    width: 10em;
-    height: 2em;
+    width: 15em;
+    height: 2.5em;
+    border-radius: 10px;
 }
 .pfp {
     grid-area: pfp;
-    width: 3em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #FFB767;
+    border-radius: 10px;
 }
+/* END OF NAVI CONTAINER */
+
 .largeCard {
     display: grid;
     grid-area: largeCard;
+    border-radius: 10px;
     width: 25em;
     height: 60vh;
+    background-color: #FFB767;
+    margin: 3em;
 }
 .random {
     width: 25em;
     height: 15vh;
+    grid-area: random;
+    border-radius: 10px;
     background-color: #FFB767;
+    margin: 3em;
 }
-/* Time of Day Gradients */
+
+/*Time of Day Gradients*/
 .backdrop-night
 {
     background-attachment: fixed;
@@ -361,7 +377,10 @@ input:checked + .slider:before {
     background: #b9adad; /* For browsers that do not support gradients */
     background: linear-gradient(#9966ff,#ff9966) fixed; /* Standard syntax */
 }
+/*End of Time of Day Gradients*/
 
+
+/* TEMP GRADIENTS */
 .temp20s {
     background-image: linear-gradient(to right bottom, rgba(154,127,205,.7), rgba(162,128,207,.7), rgba(170,128,209,.7), rgba(178,129,211,.7), rgba(186,129,212,.7), rgba(193,127,210,.7), rgba(200,126,208,.7), rgba(207,124,205,.7), rgba(214,120,199,.7), rgba(221,116,192,.7), rgba(227,113,185,.7), rgba(232,109,177,.7));
 }
@@ -384,4 +403,5 @@ input:checked + .slider:before {
 
 .temp100s {
     background-image: linear-gradient(to right top, rgba(174,76,76,.7), rgba(184,83,78,.7), rgba(194,91,80,.7), rgba(204,99,82,.7), rgba(214,107,83,.7), rgba(220,118,83,.7), rgba(225,130,84,.7), rgba(230,142,85,.7), rgba(230,160,89,.7), rgba(229,178,96,.7), rgba(227,196, 108,.7), rgba(224,213,123,.7));
-}
+
+/* END OF TEMP GRADIENTS */
