@@ -11,28 +11,10 @@ function WeatherAppFetch(location) {
 
 	let queryParameters = new URLSearchParams({
 		APPID: OPEN_WEATHER_APPID,
-		q: location, //user input location
 		lat: 29.423017,
 		lon: -98.48527,
 		units: "imperial"
 	}); // concat the query parameters onto the URL
-	function findLat(input = "San Antonio") {
-		let queryParameters1 = new URLSearchParams({
-			APPID: OPEN_WEATHER_APPID,
-			q: input //user input location
-			units: "imperial"
-		});
-		fetch("http://api.openweathermap.org/data/2.5/direct?" + queryParameters1, {
-			method: "GET"
-		}).then(async function (response) {
-			/* Use await to wait for the json data and then do something with it */
-			const data = await response.json();
-			console.log(data);
-
-		});
-	}
-	findLat("San Antonio")
-// concat the query parameters onto the URL
 	fetch("http://api.openweathermap.org/data/2.5/onecall?" + queryParameters, {
 		method: "GET"
 	}).then(async function (response) {
@@ -42,6 +24,15 @@ function WeatherAppFetch(location) {
 		console.log('The entire response:', data);
 		// console.log('Diving in - here is current information: ', data.current.temp);
 		// console.log('A step further - information for tomorrow: ', data);
+		/* Time of Day Function */
+		function tod (data) {
+			console.log(data.current.dt);
+			const todayTime = new Date(data.current.dt * 1000, {hours: "numeric", minutes: "numeric"});
+			const currentDate = new Date(data.current.dt * 1000,{weekday: 'long', day: 'numeric', year: 'numeric', month: 'long'});
+			document.querySelector(".currentTime").innerHTML = todayTime;
+			document.querySelector(".longDate").innerHTML = currentDate;
+		}
+		tod(data);
 		/* Day 1 DOM Manipulation */
 		let convertDT1 = data.daily[0].dt * 1000
 		let dateObject1 = new Date(convertDT1);
