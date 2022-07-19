@@ -50,6 +50,8 @@ body {
     font-family: Roquefort, sans-serif;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 h3, h4, h5, h6, p {
     font-family: Concourse, sans-serif;
@@ -224,6 +226,12 @@ input:checked + .slider:before {
     .detailsContainer p {
         margin-block: .7em;
     }
+    .aqi h6 {
+        margin-left: 1.5em;
+    }
+    .currentAqi {
+        margin-left: 1em;
+    }
     .aqiDetails1{
         grid-area: aqi1;
         width: 3.5em;
@@ -288,16 +296,16 @@ input:checked + .slider:before {
     }
     .title{
         grid-area: title;
-        margin-left: 1em;
+        margin-left: 1.5em;
     }
     .sun{
         grid-area: sun;
-        width: 10em;
-        margin-left: 1em;
+        /*width: 10em;*/
+        /*margin-left: 1em;*/
     }
     .moon{
         grid-area: moon;
-        width: 10em;
+        /*width: 10em;*/
     }
     /*.currentRNS{*/
     /*    grid-area: sunrise;*/
@@ -378,16 +386,25 @@ input:checked + .slider:before {
     border-radius: 10px;
     width: 25em;
     height: 60vh;
-    background-color: #FFB767;
     margin-top: .5em;
     margin-left: 3em;
     margin-right: 3em;
-    /*margin-bottom: 3em;*/
-
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.currentTemp {
+    font-size: 50px;
+}
+.wind {
+    text-align: left;
+}
+.humidity{
+    text-align: left;
 }
 .random {
     width: 25em;
-    height: 20vh;
+    height: 37.5vh;
     grid-area: random;
     border-radius: 10px;
     background-color: #FFB767;
