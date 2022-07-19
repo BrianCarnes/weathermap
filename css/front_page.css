@@ -478,3 +478,123 @@ input:checked + .slider:before {
 .animeRain {
     background-image: url("../img/totoro-rain.gif")
 }
+.iconHaze {
+    background-image: url("../img/icons8-fog.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconFog {
+    background-image: url("../img/icons8-haze.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconLightSnow {
+    background-image: url("../img/icons8-light-snow.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconMoonAndStars {
+    background-image: url("../img/icons8-moon-and-stars.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconNight {
+    background-image: url("../img/icons8-night.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconPartlyCloudy {
+    background-image: url("../img/icons8-partly-cloudy-day.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconRain {
+    background-image: url("../img/icons8-rain.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconSnowStorm {
+    background-image: url("../img/icons8-snow-storm.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconStorm {
+    background-image: url("../img/icons8-storm.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconSun {
+    background-image: url("../img/icons8-sun.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconTorrentialRain {
+    background-image: url("../img/icons8-torrential-rain.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
+.iconWind {
+    background-image: url("../img/icons8-wind.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    height: 2em;
+    width: 2em;
+    margin: .5em auto;
+    border-radius: 10px;
+}
