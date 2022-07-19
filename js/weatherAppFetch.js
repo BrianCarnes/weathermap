@@ -72,18 +72,22 @@ function WeatherAppFetch(location = ["-98.48527","29.423017"]) {
 		document.querySelector(".smallIcon4").classList.add(day4Icon);
 		/* Day 5 DOM Manipulation */
 		let convertDT5 = data.daily[4].dt * 1000
+		let day5Icon = await iconLoader(data.daily[4].weather[0].main)
 		let dateObject5 = new Date(convertDT5);
 		let today5 = dateObject5.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp5 = parseInt(data.daily[4].temp.day);
-		day5Card.innerHTML = `<h1>ICON</h1><h3>${today5}</h3>\n<h2>${currentTemp5}&deg;F</h2>`
+		day5Card.innerHTML = `<div class="smallIcon5"></div><h3>${today5}</h3>\n<h2>${currentTemp5}&deg;F</h2>`
 		day5Card.classList.add(backgroundGradient(currentTemp5));
+		document.querySelector(".smallIcon5").classList.add(day5Icon);
 		/* Day 6 DOM Manipulation */
 		let convertDT6 = data.daily[5].dt * 1000
+		let day6Icon = await iconLoader(data.daily[5].weather[0].main)
 		let dateObject6 = new Date(convertDT6);
 		let today6 = dateObject6.toLocaleString("en-US", {weekday: 'long'});
 		let currentTemp6 = parseInt(data.daily[5].temp.day);
-		day6Card.innerHTML = `<h1>ICON</h1><h3>${today6}</h3>\n<h2>${currentTemp6}&deg;F</h2>`
+		day6Card.innerHTML = `<div class="smallIcon6"></div><h3>${today6}</h3>\n<h2>${currentTemp6}&deg;F</h2>`
 		day6Card.classList.add(backgroundGradient(currentTemp6));
+		document.querySelector(".smallIcon6").classList.add(day6Icon);
 		/* Sunrise and Sunset */
 		let sunrise = data.daily[0].sunrise * 1000
 		let sunriseObject = new Date(sunrise);
