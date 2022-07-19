@@ -1,5 +1,5 @@
 'use strict';
-function WeatherAppFetch(location) {
+function WeatherAppFetch(location = ["-98.48527","29.423017"]) {
 	const day1Card = document.querySelector(".day1Card");
 	const day2Card = document.querySelector(".day2Card");
 	const day3Card = document.querySelector(".day3Card");
@@ -8,13 +8,15 @@ function WeatherAppFetch(location) {
 	const day6Card = document.querySelector(".day6Card");
 	// prepare the query parameters to identify us to openweather
 	// and give it our weather query
-
+	console.log(location);
 	let queryParameters = new URLSearchParams({
 		APPID: OPEN_WEATHER_APPID,
-		lat: 29.423017,
-		lon: -98.48527,
+		lat: location[1],
+		lon: location[0],
 		units: "imperial"
 	}); // concat the query parameters onto the URL
+	console.log(queryParameters);
+
 	fetch("http://api.openweathermap.org/data/2.5/onecall?" + queryParameters, {
 		method: "GET"
 	}).then(async function (response) {
@@ -27,10 +29,9 @@ function WeatherAppFetch(location) {
 		/* Time of Day Function */
 		function tod (data) {
 			console.log(data.current.dt);
-			const todayTime = new Date(data.current.dt * 1000, {hours: "numeric", minutes: "numeric"});
-			const currentDate = new Date(data.current.dt * 1000,{weekday: 'long', day: 'numeric', year: 'numeric', month: 'long'});
-			document.querySelector(".currentTime").innerHTML = todayTime;
-			document.querySelector(".longDate").innerHTML = currentDate;
+			const todayDateTime = new Date(data.current.dt * 1000);
+			document.querySelector(".currentTime").innerHTML = todayDateTime.toLocaleTimeString("en-US",{hours: "numeric", minutes: "numeric"});
+			document.querySelector(".longDate").innerHTML = todayDateTime.toLocaleDateString("en-US", {weekday: 'long', day: 'numeric', year: 'numeric', month: 'long'});
 		}
 		tod(data);
 		/* Day 1 DOM Manipulation */
@@ -94,7 +95,7 @@ function WeatherAppFetch(location) {
 		document.querySelector(".moonSet").innerHTML = `<p>Moonset: ${moonsetToday}</p>`
 	});
 }
-WeatherAppFetch("San Antonio, US");
+WeatherAppFetch();
 
 function backgroundGradient (temp = 1) {
 	let output;
